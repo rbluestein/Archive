@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s9="http://microsoft.com/wsdl/types/" xmlns:s8="http://www.plane.biz/exchange/20060125/headerinfo" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://www.plane.biz/exchange/20060125/benefitinfo" xmlns:s0="http://www.plane.biz/exchange/20060125/employeeinfo" xmlns:s3="http://www.plane.biz/exchange/20060125/logoninfoemployee" xmlns:s2="http://www.plane.biz/exchange/20060125/htmllayoutinfo" xmlns:s5="http://www.plane.biz/exchange/20060125/dependentinfo" xmlns:s4="http://www.plane.biz/exchange/20060125/logoninfoenroller" xmlns:s7="http://www.plane.biz/exchange/20060125/initreturn" xmlns:s6="http://www.plane.biz/exchange/20060125/hostinfo" xmlns:s10="http://www.plane.biz/exchange/20060125/sessionstatus" xmlns:s11="http://www.plane.biz/exchange/20060201/EnrollmentSummaryParameters" xmlns:s12="http://www.plane.biz/exchange/20060201/EnrollmentSummary" xmlns:tns="http://www.plane.biz/exchange/20060125/ExchangeConnect" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://www.plane.biz/exchange/20060125/ExchangeConnect" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/employeeinfo">
+      <s:element name="Employee" type="s0:Employee" />
+      <s:complexType name="Employee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameSuffix" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthState" type="s0:EmployeeStateList" />
+          <s:element minOccurs="0" maxOccurs="1" name="LengthUSResidence" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s0:EmployeeGender" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s0:EmployeeMaritalStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Class" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s0:EmployeeStateList" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salary" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfHire" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="Height_FT" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Height_IN" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Weight" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoursWorkedPerWeek" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bonus" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duties" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataChangeDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnnWorkDays" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayType" type="s0:PayTypeList" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shift" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRate" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="W4Expemt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationInfo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EmployeeStateList">
+        <s:restriction base="s:string">
+          <s:enumeration value="AK" />
+          <s:enumeration value="AL" />
+          <s:enumeration value="AR" />
+          <s:enumeration value="AZ" />
+          <s:enumeration value="BC" />
+          <s:enumeration value="CA" />
+          <s:enumeration value="CO" />
+          <s:enumeration value="CT" />
+          <s:enumeration value="DC" />
+          <s:enumeration value="DE" />
+          <s:enumeration value="FL" />
+          <s:enumeration value="GA" />
+          <s:enumeration value="GU" />
+          <s:enumeration value="HI" />
+          <s:enumeration value="IA" />
+          <s:enumeration value="ID" />
+          <s:enumeration value="IL" />
+          <s:enumeration value="IN" />
+          <s:enumeration value="KS" />
+          <s:enumeration value="KY" />
+          <s:enumeration value="LA" />
+          <s:enumeration value="MA" />
+          <s:enumeration value="MD" />
+          <s:enumeration value="ME" />
+          <s:enumeration value="MI" />
+          <s:enumeration value="MN" />
+          <s:enumeration value="MO" />
+          <s:enumeration value="MS" />
+          <s:enumeration value="MT" />
+          <s:enumeration value="NA" />
+          <s:enumeration value="NC" />
+          <s:enumeration value="ND" />
+          <s:enumeration value="NE" />
+          <s:enumeration value="NH" />
+          <s:enumeration value="NJ" />
+          <s:enumeration value="NM" />
+          <s:enumeration value="NV" />
+          <s:enumeration value="NY" />
+          <s:enumeration value="OH" />
+          <s:enumeration value="OK" />
+          <s:enumeration value="ON" />
+          <s:enumeration value="OR" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="PR" />
+          <s:enumeration value="RI" />
+          <s:enumeration value="SC" />
+          <s:enumeration value="SD" />
+          <s:enumeration value="TN" />
+          <s:enumeration value="TX" />
+          <s:enumeration value="UT" />
+          <s:enumeration value="VA" />
+          <s:enumeration value="VI" />
+          <s:enumeration value="VT" />
+          <s:enumeration value="WA" />
+          <s:enumeration value="WI" />
+          <s:enumeration value="WV" />
+          <s:enumeration value="WY" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EmployeeGender">
+        <s:restriction base="s:string">
+          <s:enumeration value="Male" />
+          <s:enumeration value="Female" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EmployeeMaritalStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="Married" />
+          <s:enumeration value="Divorced" />
+          <s:enumeration value="Separated" />
+          <s:enumeration value="Widow" />
+          <s:enumeration value="N/A" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="PayTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Hourly" />
+          <s:enumeration value="Salary" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/benefitinfo">
+      <s:element name="BenefitInfo" nillable="true" type="s1:BenefitInfo" />
+      <s:complexType name="BenefitInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BenefitType" type="s1:BenefitTypeList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BenefitTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="Group Long Term Care 2004" />
+          <s:enumeration value="Group LTC" />
+          <s:enumeration value="IIP" />
+          <s:enumeration value="Interest Sensitive Whole Life" />
+          <s:enumeration value="Specified Critical Illness" />
+          <s:enumeration value="VWB-Accident" />
+          <s:enumeration value="VWB-STD" />
+          <s:enumeration value="VWB-IUL" />
+          <s:enumeration value="VWB-Term Life" />
+          <s:enumeration value="VWB-MedSupport" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/htmllayoutinfo">
+      <s:element name="HTMLLayout" nillable="true" type="s2:HTMLLayout" />
+      <s:complexType name="HTMLLayout">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Top" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Left" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/logoninfoemployee">
+      <s:element name="LogonEmployee" type="s3:LogonEmployee" />
+      <s:complexType name="LogonEmployee">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDKey" type="s3:LogonEmployeeIDKey" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationType" type="s3:EmployeeAuthenticationTypeList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LogonEmployeeIDKey">
+        <s:restriction base="s:string">
+          <s:enumeration value="SSN" />
+          <s:enumeration value="EmployeeNumber" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EmployeeAuthenticationTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="E-Signature" />
+          <s:enumeration value="PIN" />
+          <s:enumeration value="Signature Pad" />
+          <s:enumeration value="Voice - UPC" />
+          <s:enumeration value="Voice - Other" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/logoninfoenroller">
+      <s:element name="LogonEnroller" nillable="true" type="s4:LogonEnroller" />
+      <s:complexType name="LogonEnroller">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LogonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrollmentCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnrollmentState" type="s4:EnrollerStateList" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogonType" type="s4:LogonTypeList" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationType" type="s4:EnrollerAuthenticationTypeList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EnrollerStateList">
+        <s:restriction base="s:string">
+          <s:enumeration value="AK" />
+          <s:enumeration value="AL" />
+          <s:enumeration value="AR" />
+          <s:enumeration value="AZ" />
+          <s:enumeration value="BC" />
+          <s:enumeration value="CA" />
+          <s:enumeration value="CO" />
+          <s:enumeration value="CT" />
+          <s:enumeration value="DC" />
+          <s:enumeration value="DE" />
+          <s:enumeration value="FL" />
+          <s:enumeration value="GA" />
+          <s:enumeration value="GU" />
+          <s:enumeration value="HI" />
+          <s:enumeration value="IA" />
+          <s:enumeration value="ID" />
+          <s:enumeration value="IL" />
+          <s:enumeration value="IN" />
+          <s:enumeration value="KS" />
+          <s:enumeration value="KY" />
+          <s:enumeration value="LA" />
+          <s:enumeration value="MA" />
+          <s:enumeration value="MD" />
+          <s:enumeration value="ME" />
+          <s:enumeration value="MI" />
+          <s:enumeration value="MN" />
+          <s:enumeration value="MO" />
+          <s:enumeration value="MS" />
+          <s:enumeration value="MT" />
+          <s:enumeration value="NA" />
+          <s:enumeration value="NC" />
+          <s:enumeration value="ND" />
+          <s:enumeration value="NE" />
+          <s:enumeration value="NH" />
+          <s:enumeration value="NJ" />
+          <s:enumeration value="NM" />
+          <s:enumeration value="NV" />
+          <s:enumeration value="NY" />
+          <s:enumeration value="OH" />
+          <s:enumeration value="OK" />
+          <s:enumeration value="ON" />
+          <s:enumeration value="OR" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="PR" />
+          <s:enumeration value="RI" />
+          <s:enumeration value="SC" />
+          <s:enumeration value="SD" />
+          <s:enumeration value="TN" />
+          <s:enumeration value="TX" />
+          <s:enumeration value="UT" />
+          <s:enumeration value="VA" />
+          <s:enumeration value="VI" />
+          <s:enumeration value="VT" />
+          <s:enumeration value="WA" />
+          <s:enumeration value="WI" />
+          <s:enumeration value="WV" />
+          <s:enumeration value="WY" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="LogonTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="Enroller" />
+          <s:enumeration value="Call Center - UPC" />
+          <s:enumeration value="Call Center - Other" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EnrollerAuthenticationTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="Signature Pad" />
+          <s:enumeration value="Voice - UPC" />
+          <s:enumeration value="Voice - Other" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/dependentinfo">
+      <s:element name="Dependents" nillable="true" type="s5:Dependents" />
+      <s:complexType name="Dependents">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Dependent" type="s5:DependentsDependent" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DependentsDependent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s5:DependentsDependentGender" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaritalStatus" type="s5:DependentsDependentMaritalStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelationType" type="s5:DependentRelationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s5:DependentStateList" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SchoolName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DependentStatus" type="s5:DependentStatusList" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataChangeDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DependentsDependentGender">
+        <s:restriction base="s:string">
+          <s:enumeration value="Male" />
+          <s:enumeration value="Female" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DependentsDependentMaritalStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="Married" />
+          <s:enumeration value="Divorced" />
+          <s:enumeration value="Separated" />
+          <s:enumeration value="Widow" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DependentRelationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Employee" />
+          <s:enumeration value="Child" />
+          <s:enumeration value="Spouse" />
+          <s:enumeration value="Father" />
+          <s:enumeration value="Mother" />
+          <s:enumeration value="Friends" />
+          <s:enumeration value="Others" />
+          <s:enumeration value="Domestic Partner" />
+          <s:enumeration value="Grand Child" />
+          <s:enumeration value="Foster Child" />
+          <s:enumeration value="Step Child" />
+          <s:enumeration value="Grand Father" />
+          <s:enumeration value="Grand Mother" />
+          <s:enumeration value="Niece" />
+          <s:enumeration value="Nephew" />
+          <s:enumeration value="Sister" />
+          <s:enumeration value="Brother" />
+          <s:enumeration value="Sister-in-law" />
+          <s:enumeration value="Brother-in-law" />
+          <s:enumeration value="Father-in-law" />
+          <s:enumeration value="Mother-in-law" />
+          <s:enumeration value="Adopted Child" />
+          <s:enumeration value="Cousin" />
+          <s:enumeration value="Ex-Spouse" />
+          <s:enumeration value="Sponsored Dependent" />
+          <s:enumeration value="Guardian" />
+          <s:enumeration value="Court Appointed Guardian" />
+          <s:enumeration value="Ward" />
+          <s:enumeration value="Stepfather" />
+          <s:enumeration value="Stepmother" />
+          <s:enumeration value="Collateral Dependent" />
+          <s:enumeration value="Self" />
+          <s:enumeration value="Aunt" />
+          <s:enumeration value="Uncle" />
+          <s:enumeration value="Parent" />
+          <s:enumeration value="Non-relation" />
+          <s:enumeration value="Domestic Partner's Child" />
+          <s:enumeration value="Domestic Partner's Step Child" />
+          <s:enumeration value="Domestic Partner's Adopted Child" />
+          <s:enumeration value="Domestic Partner's Foster Child" />
+          <s:enumeration value="Husband" />
+          <s:enumeration value="Wife" />
+          <s:enumeration value="Son-in-law" />
+          <s:enumeration value="Daughter-in-law" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DependentStateList">
+        <s:restriction base="s:string">
+          <s:enumeration value="" />
+          <s:enumeration value="AK" />
+          <s:enumeration value="AL" />
+          <s:enumeration value="AR" />
+          <s:enumeration value="AZ" />
+          <s:enumeration value="BC" />
+          <s:enumeration value="CA" />
+          <s:enumeration value="CO" />
+          <s:enumeration value="CT" />
+          <s:enumeration value="DC" />
+          <s:enumeration value="DE" />
+          <s:enumeration value="FL" />
+          <s:enumeration value="GA" />
+          <s:enumeration value="GU" />
+          <s:enumeration value="HI" />
+          <s:enumeration value="IA" />
+          <s:enumeration value="ID" />
+          <s:enumeration value="IL" />
+          <s:enumeration value="IN" />
+          <s:enumeration value="KS" />
+          <s:enumeration value="KY" />
+          <s:enumeration value="LA" />
+          <s:enumeration value="MA" />
+          <s:enumeration value="MD" />
+          <s:enumeration value="ME" />
+          <s:enumeration value="MI" />
+          <s:enumeration value="MN" />
+          <s:enumeration value="MO" />
+          <s:enumeration value="MS" />
+          <s:enumeration value="MT" />
+          <s:enumeration value="NA" />
+          <s:enumeration value="NC" />
+          <s:enumeration value="ND" />
+          <s:enumeration value="NE" />
+          <s:enumeration value="NH" />
+          <s:enumeration value="NJ" />
+          <s:enumeration value="NM" />
+          <s:enumeration value="NV" />
+          <s:enumeration value="NY" />
+          <s:enumeration value="OH" />
+          <s:enumeration value="OK" />
+          <s:enumeration value="ON" />
+          <s:enumeration value="OR" />
+          <s:enumeration value="PA" />
+          <s:enumeration value="PR" />
+          <s:enumeration value="RI" />
+          <s:enumeration value="SC" />
+          <s:enumeration value="SD" />
+          <s:enumeration value="TN" />
+          <s:enumeration value="TX" />
+          <s:enumeration value="UT" />
+          <s:enumeration value="VA" />
+          <s:enumeration value="VI" />
+          <s:enumeration value="VT" />
+          <s:enumeration value="WA" />
+          <s:enumeration value="WI" />
+          <s:enumeration value="WV" />
+          <s:enumeration value="WY" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DependentStatusList">
+        <s:restriction base="s:string">
+          <s:enumeration value="N\A" />
+          <s:enumeration value="Handicap" />
+          <s:enumeration value="Student" />
+          <s:enumeration value="Handicap-Student" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/hostinfo">
+      <s:element name="HostURL" nillable="true" type="s6:HostURL" />
+      <s:complexType name="HostURL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExceptionURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeoutURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/initreturn">
+      <s:element name="InitReturn" type="s7:InitReturn" />
+      <s:complexType name="InitReturn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExchangeURL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/headerinfo">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HeaderInfo" type="s8:HeaderInfo" />
+      <s:complexType name="HeaderInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EmployerID" type="s9:guid" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060125/sessionstatus">
+      <s:element name="SessionStatusIn" type="s10:SessionStatusIn" />
+      <s:complexType name="SessionStatusIn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SessionStatusOut" type="s10:SessionStatusOut" />
+      <s:complexType name="SessionStatusOut">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s10:StatusList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="StatusList">
+        <s:restriction base="s:string">
+          <s:enumeration value="True" />
+          <s:enumeration value="False" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060201/EnrollmentSummaryParameters">
+      <s:element name="EnrollmentSummaryParameters" type="s11:EnrollmentSummaryParameters" />
+      <s:complexType name="EnrollmentSummaryParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BenefitType" type="s11:ESBenefitTypeList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ESBenefitTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="Group Long Term Care 2004" />
+          <s:enumeration value="Group LTC" />
+          <s:enumeration value="IIP" />
+          <s:enumeration value="Interest Sensitive Whole Life" />
+          <s:enumeration value="Specified Critical Illness" />
+          <s:enumeration value="VWB-Accident" />
+          <s:enumeration value="VWB-STD" />
+          <s:enumeration value="VWB-IUL" />
+          <s:enumeration value="VWB-Term Life" />
+          <s:enumeration value="VWB-MedSupport" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.plane.biz/exchange/20060201/EnrollmentSummary">
+      <s:element name="EnrollmentData" type="s12:EnrollmentData" />
+      <s:complexType name="EnrollmentData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExchangeData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PublicVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CaseVersion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Deductions" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalPremiumEmployee" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalPremiumEmployer" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="Persons" type="s12:ArrayOfEnrollmentDataPerson" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExistingCoverage" type="s12:ArrayOfEnrollmentDataExistingBenefit" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Premium">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Annual" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayPeriod" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEnrollmentDataPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Person" type="s12:EnrollmentDataPerson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnrollmentDataPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SSN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateofBirth" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gender" type="s12:EnrollmentDataPersonGender" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaritalStatus" type="s12:EnrollmentDataPersonMaritalStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Occupation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthState" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Relationship" type="s12:ESDependentRelationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendedEmployeeDemographicData" type="s12:ExtendedEmployeeDemographicData" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendedDependentDemographicData" type="s12:ExtendedDependentDemographicData" />
+          <s:element minOccurs="0" maxOccurs="1" name="Benefits" type="s12:ArrayOfEnrollmentDataPersonBenefit" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EnrollmentDataPersonGender">
+        <s:restriction base="s:string">
+          <s:enumeration value="N/A" />
+          <s:enumeration value="Male" />
+          <s:enumeration value="Female" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="EnrollmentDataPersonMaritalStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="Married" />
+          <s:enumeration value="Divorced" />
+          <s:enumeration value="Separated" />
+          <s:enumeration value="Widow" />
+          <s:enumeration value="N/A" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ESDependentRelationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Employee" />
+          <s:enumeration value="Child" />
+          <s:enumeration value="Spouse" />
+          <s:enumeration value="Father" />
+          <s:enumeration value="Mother" />
+          <s:enumeration value="Friends" />
+          <s:enumeration value="Others" />
+          <s:enumeration value="Domestic Partner" />
+          <s:enumeration value="Grand Child" />
+          <s:enumeration value="Foster Child" />
+          <s:enumeration value="Step Child" />
+          <s:enumeration value="Grand Father" />
+          <s:enumeration value="Grand Mother" />
+          <s:enumeration value="Niece" />
+          <s:enumeration value="Nephew" />
+          <s:enumeration value="Sister" />
+          <s:enumeration value="Brother" />
+          <s:enumeration value="Sister-in-law" />
+          <s:enumeration value="Brother-in-law" />
+          <s:enumeration value="Father-in-law" />
+          <s:enumeration value="Mother-in-law" />
+          <s:enumeration value="Adopted Child" />
+          <s:enumeration value="Cousin" />
+          <s:enumeration value="Ex-Spouse" />
+          <s:enumeration value="Sponsored Dependent" />
+          <s:enumeration value="Guardian" />
+          <s:enumeration value="Court Appointed Guardian" />
+          <s:enumeration value="Ward" />
+          <s:enumeration value="Stepfather" />
+          <s:enumeration value="Stepmother" />
+          <s:enumeration value="Collateral Dependent" />
+          <s:enumeration value="Self" />
+          <s:enumeration value="Aunt" />
+          <s:enumeration value="Uncle" />
+          <s:enumeration value="Parent" />
+          <s:enumeration value="Non-relation" />
+          <s:enumeration value="Domestic Partner's Child" />
+          <s:enumeration value="Domestic Partner's Step Child" />
+          <s:enumeration value="Domestic Partner's Adopted Child" />
+          <s:enumeration value="Domestic Partner's Foster Child" />
+          <s:enumeration value="Husband" />
+          <s:enumeration value="Wife" />
+          <s:enumeration value="Son-in-law" />
+          <s:enumeration value="Daughter-in-law" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ExtendedEmployeeDemographicData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LocationID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClassID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaidenName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Suffix" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Salary" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeightFeet" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeightInches" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weight" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HireDate" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillUnit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HoursWorkedPerWeek" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bonus" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Duties" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AnnualWorkDays" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PinCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="County" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayType" type="s12:ESPayTypeList" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shift" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxRate" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationInfo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ESPayTypeList">
+        <s:restriction base="s:string">
+          <s:enumeration value="N/A" />
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Hourly" />
+          <s:enumeration value="Salary" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ExtendedDependentDemographicData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SchoolName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DependentStatus" type="s12:ESDependentStatusList" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ESDependentStatusList">
+        <s:restriction base="s:string">
+          <s:enumeration value="N\A" />
+          <s:enumeration value="Handicap" />
+          <s:enumeration value="Student" />
+          <s:enumeration value="Handicap-Student" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfEnrollmentDataPersonBenefit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Benefit" type="s12:EnrollmentDataPersonBenefit" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnrollmentDataPersonBenefit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s12:BenefitStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverageBeginDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverageChangeDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoverageEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FirstDeductionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreTaxBenefitPremiumEmployee" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="AfterTaxBenefitPremiumEmployee" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalBenefitPremiumEmployee" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalBenefitPremiumEmployer" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="Coverages" type="s12:ArrayOfEnrollmentDataPersonBenefitCoverageDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BenefitStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Complete" />
+          <s:enumeration value="Decline" />
+          <s:enumeration value="Incomplete" />
+          <s:enumeration value="Kit Requested" />
+          <s:enumeration value="Maintain" />
+          <s:enumeration value="Not Eligible" />
+          <s:enumeration value="Opt-Out" />
+          <s:enumeration value="Paper Application" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Waive" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfEnrollmentDataPersonBenefitCoverageDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CoverageDetails" type="s12:EnrollmentDataPersonBenefitCoverageDetails" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnrollmentDataPersonBenefitCoverageDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Premium" type="s12:Premium" />
+          <s:element minOccurs="0" maxOccurs="1" name="CoverageAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="EliminationBenefitPeriod" type="s12:EnrollmentDataPersonBenefitCoverageDetailsEliminationBenefitPeriod" />
+          <s:element minOccurs="0" maxOccurs="1" name="Units" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnrollmentDataPersonBenefitCoverageDetailsEliminationBenefitPeriod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccidentEliminationPeriod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SicknessEliminationPeriod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BenefitPeriod" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEnrollmentDataExistingBenefit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ExistingBenefit" type="s12:EnrollmentDataExistingBenefit" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnrollmentDataExistingBenefit">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuredName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Premium" type="s12:Premium" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetExchangeStatusSoapIn">
+    <wsdl:part name="employee" element="s0:Employee" />
+    <wsdl:part name="benefit" element="s1:BenefitInfo" />
+    <wsdl:part name="layout" element="s2:HTMLLayout" />
+    <wsdl:part name="eeLogon" element="s3:LogonEmployee" />
+    <wsdl:part name="enrollerLogon" element="s4:LogonEnroller" />
+    <wsdl:part name="deps" element="s5:Dependents" />
+    <wsdl:part name="hostEndPoint" element="s6:HostURL" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeStatusSoapOut">
+    <wsdl:part name="GetExchangeStatusResult" element="s7:InitReturn" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeStatusHeaderInfo">
+    <wsdl:part name="HeaderInfo" element="s8:HeaderInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeSessionStatusSoapIn">
+    <wsdl:part name="sessionStatusIn" element="s10:SessionStatusIn" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeSessionStatusSoapOut">
+    <wsdl:part name="GetExchangeSessionStatusResult" element="s10:SessionStatusOut" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeSessionStatusHeaderInfo">
+    <wsdl:part name="HeaderInfo" element="s8:HeaderInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeEnrollmentSummarySoapIn">
+    <wsdl:part name="enrollmentSummaryParameters" element="s11:EnrollmentSummaryParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeEnrollmentSummarySoapOut">
+    <wsdl:part name="GetExchangeEnrollmentSummaryResult" element="s12:EnrollmentData" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeEnrollmentSummaryHeaderInfo">
+    <wsdl:part name="HeaderInfo" element="s8:HeaderInfo" />
+  </wsdl:message>
+  <wsdl:portType name="ExchangeConnectSoap">
+    <wsdl:operation name="GetExchangeStatus">
+      <wsdl:input message="tns:GetExchangeStatusSoapIn" />
+      <wsdl:output message="tns:GetExchangeStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeSessionStatus">
+      <wsdl:input message="tns:GetExchangeSessionStatusSoapIn" />
+      <wsdl:output message="tns:GetExchangeSessionStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeEnrollmentSummary">
+      <wsdl:input message="tns:GetExchangeEnrollmentSummarySoapIn" />
+      <wsdl:output message="tns:GetExchangeEnrollmentSummarySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExchangeConnectSoap" type="tns:ExchangeConnectSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetExchangeStatus">
+      <soap:operation soapAction="http://www.plane.biz/exchange/20060125/ExchangeConnect/GetExchangeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeStatusHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeStatusHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeSessionStatus">
+      <soap:operation soapAction="http://www.plane.biz/exchange/20060125/ExchangeConnect/GetExchangeSessionStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeSessionStatusHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeSessionStatusHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeEnrollmentSummary">
+      <soap:operation soapAction="http://www.plane.biz/exchange/20060125/ExchangeConnect/GetExchangeEnrollmentSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeEnrollmentSummaryHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetExchangeEnrollmentSummaryHeaderInfo" part="HeaderInfo" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExchangeConnect">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">ExchangeConnect</documentation>
+    <wsdl:port name="ExchangeConnectSoap" binding="tns:ExchangeConnectSoap">
+      <soap:address location="https://demo.plane.biz/Exchange2/ExchangeConnect.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
